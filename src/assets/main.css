@@ -1,0 +1,146 @@
+/* 全局样式重置和游戏相关样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: #000033;
+}
+
+#app {
+  width: 100%;
+  height: 100vh;
+}
+
+/* 防止按钮焦点轮廓 */
+button:focus {
+  outline: none;
+}
+
+/* 禁用文本选择 */
+.game-container,
+.game-area,
+.player-plane,
+.enemy-plane,
+.bullet {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* 确保所有游戏元素正确渲染 */
+.player-plane,
+.enemy-plane,
+.bullet,
+.explosion {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+/* 添加过渡动画 */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #000000;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* 游戏按钮通用样式 */
+button {
+  border-radius: 5px;
+  border: 1px solid transparent;
+  padding: 0.8em 1.5em;
+  font-size: 1.2em;
+  font-weight: 600;
+  font-family: inherit;
+  background-color: #0ff;
+  color: #000;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff0;
+  transform: scale(1.05);
+}
+
+button:focus,
+button:focus-visible {
+  outline: 2px solid #0ff;
+  outline-offset: 2px;
+}
+
+/* 标题样式 */
+h1 {
+  font-size: 3rem;
+  line-height: 1.1;
+  color: #0ff;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+/* 段落样式 */
+p {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+/* 确保游戏区域响应式 */
+.game-container {
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+}
+
+/* 禁用文本选择，避免游戏操作时误选 */
+.game-area {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
